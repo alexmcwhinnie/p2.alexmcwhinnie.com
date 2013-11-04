@@ -53,6 +53,7 @@
 			<input type='submit' value='Log in'>
 		</form>
 	</div>
+	<hr>
     <!-- Otherwise, hide it follow link -->
     <?php else: ?>
         
