@@ -12,40 +12,40 @@
 </head>
 
 <body>  
-    <div id = "wrapper"
-    <header>
-        <h1><?=APP_NAME?></h1>
-        <nav>
-            <ul>
-                <li><a href='/'>Home</a></li>
+    <div id = "wrapper">
+        <header>
+            <h1><?=APP_NAME?></h1>
+            <nav>
+                <ul>
+                    <li><a href='/'>Home</a></li>
 
-                <!-- Menu for users who are logged in -->
-                <?php if($user): ?>
-                    <li><a href='/posts'>View Posts</a></li>
-                    <li><a href='/posts/add'>Add a Post</a></li>
-                    <li><a href='/posts/users'>Following</a></li>
-                    <li><a href='/users/profile'>Profile</a></li>
-                    <li><a href='/users/logout'>Logout</a></li>
+                    <!-- Menu for users who are logged in -->
+                    <?php if($user): ?>
+                        <li><a href='/posts'>View Posts</a></li>
+                        <li><a href='/posts/add'>Add a Post</a></li>
+                        <li><a href='/posts/users'>Following</a></li>
+                        <li><a href='/users/profile'>Profile</a></li>
+                        <li><a href='/users/logout'>Logout</a></li>
 
-                <!-- Menu options for users who are not logged in -->
-                <?php else: ?>
+                    <!-- Menu options for users who are not logged in -->
+                    <?php else: ?>
 
-                    <li><a href='/users/signup'>Sign up</a></li>
-                    <li><a href='/users/login'>Log in</a></li>
+                        <li><a href='/users/signup'>Sign up</a></li>
+                        <li><a href='/users/login'>Log in</a></li>
 
-                <?php endif; ?>
+                    <?php endif; ?>
+                </ul>
                 <hr>
-            </ul>
-        </nav>
-    </header>
-    <div id = "content">
-        <!-- Load in content -->
-        <?php if(isset($content)) echo $content; ?>
+            </nav>
+        </header>
+        <div id = "content">
+            <!-- Load in content -->
+            <?php if(isset($content)) echo $content; ?>
+        </div>
+        <footer>
+            <!-- Insert App name and current year -->
+            <p>Copyright <?=APP_NAME?> <?php echo date('Y')?></p>
+        </footer>
     </div>
-    <footer>
-    </footer>
-    </div>
-</body>
-
 </body>
 </html>
