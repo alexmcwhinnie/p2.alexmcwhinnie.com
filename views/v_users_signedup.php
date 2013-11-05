@@ -1,1 +1,1 @@
-<h1>Thanks for signing up</h1>
+<h2>Thanks for signing up</h2>

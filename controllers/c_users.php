@@ -6,10 +6,11 @@ class users_controller extends base_controller {
         //echo "users_controller construct called<br><br>";
     } 
 
-    public function signup() {
+    public function signup($error = NULL) {
     # Setup view
         $this->template->content = View::instance('v_users_signup');
         $this->template->title   = "Sign Up";
+        //$this->template->content->error   = $error;
 
     # Render template
         echo $this->template;    
@@ -17,15 +18,7 @@ class users_controller extends base_controller {
 
     public function p_signup() {
 
-        # Dump out the results of POST to see what the form submitted
-        //echo '<pre>';
-        //print_r($_POST);
-        //echo '</pre>';   
-
-        # Dump out the results of POST to see what the form submitted
-        // print_r($_POST);
-
-        # More data we want stored with the user
+        # Data we want stored with the user
         $_POST['created']  = Time::now();
         $_POST['modified'] = Time::now();
 
@@ -38,7 +31,6 @@ class users_controller extends base_controller {
         # Insert this user into the database
         $user_id = DB::instance(DB_NAME)->insert('users', $_POST);
 
-        # For now, just confirm they've signed up - 
         # Setup view
         $this->template->content = View::instance('v_users_signedup');
         $this->template->title   = "Welcome";

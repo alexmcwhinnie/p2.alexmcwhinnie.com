@@ -1,6 +1,8 @@
 <h2>Welcome to <?=APP_NAME?><?php if($user) echo ', '.$user->first_name; ?></h2>
 <p>
-	Nulla fringilla vehicula est ac rutrum. Sed eu massa auctor, aliquet dui a, dapibus ante. Phasellus a vulputate odio. Integer venenatis magna et turpis adipiscing, ac cursus diam euismod. Praesent tincidunt orci nisl, fringilla vestibulum augue gravida ac. Morbi sodales interdum viverra. Aliquam cursus nibh mauris, quis laoreet lacus vulputate vitae. Donec id pellentesque lacus, egestas mollis metus. Etiam quis neque quis sem placerat aliquam. Integer porttitor pharetra orci. Aenean accumsan semper pulvinar.
+	Welcome to Wingaling, a place where users can share information about bird sightings! If you don't have an account yet, sign up and start posting today.<br><br> 
+	<strong>+1 Features:</strong> Logged-in users can view their info and delete and edit their posts in /users/profile.<br><br> 
+	<strong>Note:</strong> I spent a lot of time trying to get the php form validation working, but sadly I had no success. Currently there is nothing stopping a user from signing up with an identical email address	
 </p>
 
 <?php if(!$user): ?>
