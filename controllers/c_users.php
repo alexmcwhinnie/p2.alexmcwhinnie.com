@@ -6,10 +6,6 @@ class users_controller extends base_controller {
         //echo "users_controller construct called<br><br>";
     } 
 
-    public function index() {
-        echo "This is the index page";
-    }
-
     public function signup() {
     # Setup view
         $this->template->content = View::instance('v_users_signup');

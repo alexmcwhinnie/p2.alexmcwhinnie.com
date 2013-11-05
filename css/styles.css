@@ -48,12 +48,18 @@ textarea {
 }
 
 h1 {
-	margin: 20px 0px 20px 0px;
+	width: 234px;
+	height: 144px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	background-image: url('/images/wingaling-logo.png');
+	background-repeat: no-repeat;
 }
 
 h2 {
 	margin: 20px 0px 10px 0px;
-	color: #CC3300;
+	color: #99090C;
 }
 
 h3 {
@@ -61,7 +67,7 @@ h3 {
 }
 
 nav {
-	
+	margin: 20px 0px 0px 5px;
 }
 
 nav ul {
@@ -70,24 +76,25 @@ nav ul {
 
 nav ul li {
 	float: left;
-	padding: 5px;
-	margin-right: 5px;
+	margin-right: 7px;
 }
 
 nav a:link, nav a:visited {
-	color: #333333;
+	color: #ffffff;
 	font-weight: bold;
 	text-decoration: none;
+	background-color: #99090C;
+	padding: 7px;
+	border-radius: 5px;
 }
 
 nav a:hover {
-	color: #CC3300;
+	color: #ffffff;
 	font-weight: bold;
-	border-style: solid;
-	border-top-width: 0px;
-	border-right-width: 0px;
-	border-bottom-width: 5px;
-	border-left-width: 0px;
+	text-decoration: none;
+	background-color: #D2691E;
+	padding: 7px;
+	border-radius: 5px;
 }
 
 #content ul li {

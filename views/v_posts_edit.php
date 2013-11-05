@@ -1,11 +1,15 @@
 <h2>Edit Post</h2>
+<h3>Your Original Post</h3>
 
 <?php foreach($posts as $post): ?>
+	<?=$post['content']?>
+	<br>
+	<span class = "date">
+    	<time datetime="<?=Time::display($post['created'],'Y-m-d G:i')?>">
+        	<?=Time::display($post['created'])?>
+    	</time>
+	</span>
 
-	<h3>Your Original Post</h3>
-	<!-- Show Original Post -->
-    <p><?=$post['content']?> on <?=Time::display($post['modified'])?></p>
-    <br>
     <!-- Display Form to Edit Post -->
 	<form method='POST' action="/posts/p_edit/<?=$post['post_id']?>">
 
@@ -17,4 +21,3 @@
 
 	</form> 
 <?php endforeach; ?>
-
