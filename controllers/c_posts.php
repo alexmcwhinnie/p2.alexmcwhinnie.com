@@ -5,7 +5,8 @@ class posts_controller extends base_controller {
 
 		#make sure users is logged in before letting them access contents of controller
 		if(!$this->user) {
-			die("Members only, Fool. <br> <a href='/users/login'>Login</a>");
+			# Send them to create an account and kill the following methods
+    		die(Router::redirect("/users/signup"));
 		}
 	}
 
